@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A Wordladder Display Webpage.">
+    <title>Wordladder</title>
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script src="jquery-3.3.1.min.js"></script>
+
+
+    <style>
+        div.input-group {
+            margin: 15px;
+        }
+    </style>
+    <style>
+        .fileinput-button {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+        }
+
+        .fileinput-button input {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            opacity: 0;
+            -ms-filter: 'alpha(opacity=0)';
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="">Fantastic Wordladder</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-body">
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="./Lab 3 Serafini.pdf" target="_blank">Discription</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div id="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="home_banner_area">
+                        <div class="home_banner center_content text-center">
+                            <div class="home_banner_form">
+                                <div class="middle_info">
+                                    <h1>Fantastic Wordladder</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon">Begin</span>
+                        <input type="text" class="form-control" placeholder="Please enter the begin word!" aria-describedby="sizing-addon1">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon">End</span>
+                        <input type="text" class="form-control" placeholder="Please enter the end word!" aria-describedby="sizing-addon1">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-4 col-md-2">
+                    <span class="btn btn-default btn-block fileinput-button">
+                        <span>Upload Dictionary</span>
+                        <input type="file" id="upfile">
+                    </span>
+                </div>
+                <div class="col-md-2">
+                    <input id="submit" class="btn btn-default btn-block" type="submit" onclick="wordladder()" value="Show">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="wordladder.js"></script>
+
+</html>
