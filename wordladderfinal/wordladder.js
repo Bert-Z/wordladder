@@ -66,7 +66,7 @@ function wordladder() {
                 else {
                     if (dictionary.hasOwnProperty(newword) && dictionary[newword] != 1) {
                         let newStack = currentWordStack.slice(0);
-
+                        
                         newStack.push(newword);
                         wordLadderQue.push(newStack);
 
@@ -86,12 +86,8 @@ function wordladder() {
 
     }
 
+    $("#ladder").append(`<div class="text">${targertStack.join("->")}</div>`);
     var size = targertStack.length;
-
-    $("#myslide").append(`<div class="slide">
-    <h2 class="title title--style-2 title--centered">best</h2>
-</div>`)
-
     for (var k = 0; k < size; k++) {
         console.log(targertStack[0]);
         targertStack.splice(0, 1);
